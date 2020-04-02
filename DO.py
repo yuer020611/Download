@@ -1,7 +1,11 @@
 import requests 
-print ("Welcome to do")
-print ("D url=xxxxx path=xxxx")
-url = 'http://www.anyuer.club/zb_system/login.php' 
+import os
+path = os.getcwd()
+print ("Welcome to DO")
+url = input("Pleast input the downloade links : ")
+savename = input("Pleast input the savename :")
+savepath = path + "/" + savename
 r = requests.get(url) 
-with open("D://001.php", "wb") as code:
+with open(savepath, "wb") as code:
      code.write(r.content)
+
